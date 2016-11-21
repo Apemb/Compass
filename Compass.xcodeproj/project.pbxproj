@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1505F84C218218F0C660BA3F /* Pods_Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FCE4B7702D7CF51F2E1BBF8 /* Pods_Compass.framework */; };
+		702FAEDE1DDE0C2800CA6942 /* SplashModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702FAEDD1DDE0C2800CA6942 /* SplashModule.swift */; };
+		702FAEE31DDE13B100CA6942 /* UIStoryboardGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702FAEE21DDE13B100CA6942 /* UIStoryboardGenerated.swift */; };
+		702FAEE91DDE1BD500CA6942 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 702FAEEB1DDE1BD500CA6942 /* Localizable.strings */; };
+		70455A7E1DE37FBE005A271D /* LocalizableStringsGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70455A7D1DE37FBE005A271D /* LocalizableStringsGenerated.swift */; };
 		70634C4F1DDDA1C800463D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70634C4E1DDDA1C800463D52 /* AppDelegate.swift */; };
 		70634C511DDDA1C800463D52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70634C501DDDA1C800463D52 /* ViewController.swift */; };
 		70634C541DDDA1C800463D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70634C521DDDA1C800463D52 /* Main.storyboard */; };
@@ -30,11 +34,17 @@
 /* Begin PBXFileReference section */
 		01C24E2C0EEE67DA7B23B596 /* Pods-Compass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Compass/Pods-Compass.debug.xcconfig"; sourceTree = "<group>"; };
 		256CAD243303EEE5E26A109B /* Pods-CompassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompassTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompassTests/Pods-CompassTests.release.xcconfig"; sourceTree = "<group>"; };
+		702FAEDD1DDE0C2800CA6942 /* SplashModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashModule.swift; path = Modules/Splash/SplashModule.swift; sourceTree = "<group>"; };
+		702FAEE21DDE13B100CA6942 /* UIStoryboardGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboardGenerated.swift; path = GeneratedFiles/UIStoryboardGenerated.swift; sourceTree = "<group>"; };
+		702FAEEA1DDE1BD500CA6942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		702FAEEC1DDE1BDE00CA6942 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		702FAEED1DDE1C8200CA6942 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		70455A7D1DE37FBE005A271D /* LocalizableStringsGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizableStringsGenerated.swift; path = GeneratedFiles/LocalizableStringsGenerated.swift; sourceTree = "<group>"; };
 		70634C4B1DDDA1C800463D52 /* Compass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70634C4E1DDDA1C800463D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70634C501DDDA1C800463D52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		70634C531DDDA1C800463D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		70634C551DDDA1C800463D52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70634C551DDDA1C800463D52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Ressources/Assets.xcassets; sourceTree = "<group>"; };
 		70634C581DDDA1C800463D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70634C5A1DDDA1C800463D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70634C5F1DDDA1C800463D52 /* CompassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +87,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		702FAEDF1DDE0C3900CA6942 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				702FAEE01DDE0C4300CA6942 /* Splash */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		702FAEE01DDE0C4300CA6942 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				702FAEDD1DDE0C2800CA6942 /* SplashModule.swift */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		702FAEE41DDE13B400CA6942 /* GeneratedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				702FAEE21DDE13B100CA6942 /* UIStoryboardGenerated.swift */,
+				70455A7D1DE37FBE005A271D /* LocalizableStringsGenerated.swift */,
+			);
+			name = GeneratedFiles;
+			sourceTree = "<group>";
+		};
+		702FAEE61DDE1B4B00CA6942 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				70634C551DDDA1C800463D52 /* Assets.xcassets */,
+				702FAEEB1DDE1BD500CA6942 /* Localizable.strings */,
+			);
+			name = Ressources;
+			sourceTree = "<group>";
+		};
 		70634C421DDDA1C700463D52 = {
 			isa = PBXGroup;
 			children = (
@@ -103,9 +147,11 @@
 				70634C4E1DDDA1C800463D52 /* AppDelegate.swift */,
 				70634C501DDDA1C800463D52 /* ViewController.swift */,
 				70634C521DDDA1C800463D52 /* Main.storyboard */,
-				70634C551DDDA1C800463D52 /* Assets.xcassets */,
 				70634C571DDDA1C800463D52 /* LaunchScreen.storyboard */,
 				70634C5A1DDDA1C800463D52 /* Info.plist */,
+				702FAEE61DDE1B4B00CA6942 /* Ressources */,
+				702FAEE41DDE13B400CA6942 /* GeneratedFiles */,
+				702FAEDF1DDE0C3900CA6942 /* Modules */,
 			);
 			path = Compass;
 			sourceTree = "<group>";
@@ -141,6 +187,7 @@
 				70634C491DDDA1C700463D52 /* Resources */,
 				D22231EF986270F90FBCD3B3 /* [CP] Embed Pods Frameworks */,
 				EAEF6E80B1CBEAFA987C4807 /* [CP] Copy Pods Resources */,
+				702FAEE11DDE0DF300CA6942 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -202,6 +249,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 70634C421DDDA1C700463D52;
 			productRefGroup = 70634C4C1DDDA1C800463D52 /* Products */;
@@ -220,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70634C591DDDA1C800463D52 /* LaunchScreen.storyboard in Resources */,
+				702FAEE91DDE1BD500CA6942 /* Localizable.strings in Resources */,
 				70634C561DDDA1C800463D52 /* Assets.xcassets in Resources */,
 				70634C541DDDA1C800463D52 /* Main.storyboard in Resources */,
 			);
@@ -280,6 +329,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompassTests/Pods-CompassTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		702FAEE11DDE0DF300CA6942 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen storyboards --templatePath ./Scripts/storyboards-bundle-swift3.stencil ./Compass > ./Compass/GeneratedFiles/UIStoryboardGenerated.swift\n$PODS_ROOT/SwiftGen/bin/swiftgen strings -t swift3 ./Compass/Ressources/Base.lproj/Localizable.strings > ./Compass/GeneratedFiles/LocalizableStringsGenerated.swift";
+		};
 		762F494FFECB6B32697497C5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -332,6 +395,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702FAEE31DDE13B100CA6942 /* UIStoryboardGenerated.swift in Sources */,
+				70455A7E1DE37FBE005A271D /* LocalizableStringsGenerated.swift in Sources */,
+				702FAEDE1DDE0C2800CA6942 /* SplashModule.swift in Sources */,
 				70634C511DDDA1C800463D52 /* ViewController.swift in Sources */,
 				70634C4F1DDDA1C800463D52 /* AppDelegate.swift in Sources */,
 			);
@@ -356,6 +422,17 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		702FAEEB1DDE1BD500CA6942 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				702FAEEA1DDE1BD500CA6942 /* Base */,
+				702FAEEC1DDE1BDE00CA6942 /* en */,
+				702FAEED1DDE1C8200CA6942 /* fr */,
+			);
+			name = Localizable.strings;
+			path = Ressources;
+			sourceTree = "<group>";
+		};
 		70634C521DDDA1C800463D52 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -379,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -415,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -428,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -458,7 +537,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

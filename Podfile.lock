@@ -1,15 +1,18 @@
 PODS:
   - Nimble (5.1.1)
   - Quick (0.10.0)
+  - SwiftGen (3.0.1)
 
 DEPENDENCIES:
   - Nimble (~> 5.1.1)
   - Quick (~> 0.10)
+  - SwiftGen
 
 SPEC CHECKSUMS:
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
+  SwiftGen: 5f69367fae99c11d52d1ab9d45dcf10a3e59b8ef
 
-PODFILE CHECKSUM: 01bab1efdee9a1e260fb59c7d9056b30543d4aa9
+PODFILE CHECKSUM: 53cb0081e18275b9650a77487a80fe3c80b99f13
 
 COCOAPODS: 1.1.1

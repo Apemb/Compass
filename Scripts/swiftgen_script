@@ -1,0 +1,7 @@
+#!/bin/sh
+
+swiftgen colors -t swift3 colors.txt > ../Main/GeneratedFiles/UIColorGenerated.swift
+swiftgen images --templatePath images-bundle-swift3.stencil ../Main > ../Main/GeneratedFiles/UIImageGenerated.swift
+swiftgen storyboards -t swift3 ../Main > ../Main/GeneratedFiles/UIStoryboardGenerated.swift
+swiftgen strings -t swift3 ../Main/Application/fr.lproj/Localizable.strings > ../Main/GeneratedFiles/LocalizableStringsGenerated.swift
+swiftgen fonts -t swift3 ../Main/Fonts > ../Main/GeneratedFiles/UIFontGenerated.swift
