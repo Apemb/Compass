@@ -185,12 +185,13 @@
 			buildConfigurationList = 70634C681DDDA1C800463D52 /* Build configuration list for PBXNativeTarget "Compass" */;
 			buildPhases = (
 				12698187FEE8903CF872B2BB /* [CP] Check Pods Manifest.lock */,
+				70455A811DE39198005A271D /* SwiftLint */,
+				702FAEE11DDE0DF300CA6942 /* SwiftGen */,
 				70634C471DDDA1C700463D52 /* Sources */,
 				70634C481DDDA1C700463D52 /* Frameworks */,
 				70634C491DDDA1C700463D52 /* Resources */,
 				D22231EF986270F90FBCD3B3 /* [CP] Embed Pods Frameworks */,
 				EAEF6E80B1CBEAFA987C4807 /* [CP] Copy Pods Resources */,
-				702FAEE11DDE0DF300CA6942 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -345,6 +346,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen storyboards --templatePath ./Scripts/storyboards-bundle-swift3.stencil ./Compass > ./Compass/GeneratedFiles/UIStoryboardGenerated.swift\n$PODS_ROOT/SwiftGen/bin/swiftgen strings -t swift3 ./Compass/Ressources/Base.lproj/Localizable.strings > ./Compass/GeneratedFiles/LocalizableStringsGenerated.swift";
+		};
+		70455A811DE39198005A271D /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if hash swiftlint 2>/dev/null; then\n    swiftlint autocorrect\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		762F494FFECB6B32697497C5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

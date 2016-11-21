@@ -12,16 +12,17 @@ The application has 4 roles :
 
 ## Technical part
 This is a Swift 3 projet. Built it the standard way...
-1. Git clone the project
+
+*1. Git clone the project
 ```bash
 git clone git@github.com:Apemb/Compass.git
 ```
-2. Built the pod file
+*2. Built the pod file
 ```bash
 pod install
 ```
-3. Have fun ^^
+*3. Have fun ^^
 
 The project has two notable built scripts:
-* swiftlint - a linter
+* swiftlint - a nice linter to make sur the code is nice and tidy
 * swiftgen - an awesome gem making your life easer dealing with images, strings and storybords  

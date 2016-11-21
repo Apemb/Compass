@@ -215,5 +215,10 @@ fastlane/screenshots
 
 iOSInjectionProject/
 
+#Babelish
+#
+# don’t copy the tokens… 
+*.token
+
 ### Objective-C Patch ###
 *.xcscmblueprint
