@@ -2,14 +2,16 @@
 Compass, a GPS navigation application designed for bikes 
 
 ## Introduction
-Compass is a pair, a device and an application, working together over BLE to make bike fun and easy even on unknown roads.\n
-This obviously is the application part :-). It is also a big WIP for now... \n
+Compass is a pair, a device and an application, working together over BLE to make bike fun and easy even on unknown roads.
+
+This obviously is the application part :-). It is also a big WIP for now...
+
 The application has 4 roles :
 
-1. Be the UI for finding and setting a destination - a mapView with a search function *native map and search?*
-2. Get the path to the destination - connection to a bike Routing API *specialized bike routing service?*
-3. Manage the connection cycle with the BLE device - search, connection, disconnection *native BLE api?*
-4. Provide the BLE device with the right data for the routing - direction and distance to waypoints *custom direction manager?*
+1. Be the UI for finding and setting a destination - a mapView with a search function: *native map and search?*
+2. Get the path to the destination - connection to a bike Routing API *specialized bike: routing service?*
+3. Manage the connection cycle with the BLE device - search, connection, disconnection: *native BLE api?*
+4. Provide the BLE device with the right data for the routing - direction and distance to waypoints: *custom direction manager?*
 
 ## Technical part
 This is a Swift 3 projet. Built it the standard way...
