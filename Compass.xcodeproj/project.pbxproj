@@ -12,6 +12,7 @@
 		702FAEE31DDE13B100CA6942 /* UIStoryboardGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702FAEE21DDE13B100CA6942 /* UIStoryboardGenerated.swift */; };
 		702FAEE91DDE1BD500CA6942 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 702FAEEB1DDE1BD500CA6942 /* Localizable.strings */; };
 		70455A7E1DE37FBE005A271D /* LocalizableStringsGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70455A7D1DE37FBE005A271D /* LocalizableStringsGenerated.swift */; };
+		70455A801DE382AB005A271D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 70455A7F1DE382AB005A271D /* README.md */; };
 		70634C4F1DDDA1C800463D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70634C4E1DDDA1C800463D52 /* AppDelegate.swift */; };
 		70634C511DDDA1C800463D52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70634C501DDDA1C800463D52 /* ViewController.swift */; };
 		70634C541DDDA1C800463D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70634C521DDDA1C800463D52 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		702FAEEC1DDE1BDE00CA6942 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		702FAEED1DDE1C8200CA6942 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		70455A7D1DE37FBE005A271D /* LocalizableStringsGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizableStringsGenerated.swift; path = GeneratedFiles/LocalizableStringsGenerated.swift; sourceTree = "<group>"; };
+		70455A7F1DE382AB005A271D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		70634C4B1DDDA1C800463D52 /* Compass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70634C4E1DDDA1C800463D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70634C501DDDA1C800463D52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		702FAEE61DDE1B4B00CA6942 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				70634C5A1DDDA1C800463D52 /* Info.plist */,
 				70634C551DDDA1C800463D52 /* Assets.xcassets */,
 				702FAEEB1DDE1BD500CA6942 /* Localizable.strings */,
 			);
@@ -124,6 +127,7 @@
 		70634C421DDDA1C700463D52 = {
 			isa = PBXGroup;
 			children = (
+				70455A7F1DE382AB005A271D /* README.md */,
 				70634C4D1DDDA1C800463D52 /* Compass */,
 				70634C621DDDA1C800463D52 /* CompassTests */,
 				70634C4C1DDDA1C800463D52 /* Products */,
@@ -148,7 +152,6 @@
 				70634C501DDDA1C800463D52 /* ViewController.swift */,
 				70634C521DDDA1C800463D52 /* Main.storyboard */,
 				70634C571DDDA1C800463D52 /* LaunchScreen.storyboard */,
-				70634C5A1DDDA1C800463D52 /* Info.plist */,
 				702FAEE61DDE1B4B00CA6942 /* Ressources */,
 				702FAEE41DDE13B400CA6942 /* GeneratedFiles */,
 				702FAEDF1DDE0C3900CA6942 /* Modules */,
@@ -395,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70455A801DE382AB005A271D /* README.md in Sources */,
 				702FAEE31DDE13B100CA6942 /* UIStoryboardGenerated.swift in Sources */,
 				70455A7E1DE37FBE005A271D /* LocalizableStringsGenerated.swift in Sources */,
 				702FAEDE1DDE0C2800CA6942 /* SplashModule.swift in Sources */,
