@@ -20,6 +20,7 @@ This is a Swift 3 projet. Built it the standard way...
 ```bash
 git clone git@github.com:Apemb/Compass.git
 ```
+
 2 - Built the pod file
 ```bash
 pod install

@@ -1,18 +1,15 @@
-//
-//  ViewController.swift
-//  Compass
-//
-//  Created by Antoine Boileau on 17/11/16.
-//  Copyright © 2016 Antoine Boileau. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+class SplashViewController: UIViewController {
+
+  @IBOutlet weak var spinner: UIActivityIndicatorView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    spinner.activityIndicatorViewStyle = .whiteLarge
+    spinner.color = UIColor.darkGray
+    spinner.startAnimating()
   }
 
   override func didReceiveMemoryWarning() {

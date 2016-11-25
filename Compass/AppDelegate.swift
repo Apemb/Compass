@@ -1,21 +1,19 @@
-//
-//  AppDelegate.swift
-//  Compass
-//
-//  Created by Antoine Boileau on 17/11/16.
-//  Copyright © 2016 Antoine Boileau. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
+  var applicationRouter: ApplicationRouter!
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    window = UIWindow(frame: UIScreen.main.bounds)
+    if let window = window {
+      window.makeKeyAndVisible()
+      applicationRouter = ApplicationRouter(window: window)
+    }
     return true
   }
 
@@ -28,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func applicationDidEnterBackground(_ application: UIApplication) {
-//    Use this method to release shared resources, save user data, invalidate timers, and store enough application state information
+//    Use this method to release shared resources, save user data, invalidate timers, and store enough application state information/Users/antoineboileau/Programming/Compass/Assets/CompassIcon-iconer/ios.xcassets/CompassIcon.appiconset
 //    to restore your application to its current state in case it is terminated later.
 //    If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
   }
