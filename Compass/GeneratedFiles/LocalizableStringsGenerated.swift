@@ -15,6 +15,8 @@ enum L10n {
   case generalConfirm
   /// Error
   case generalError
+  /// Start
+  case generalStart
 }
 // swiftlint:enable type_body_length
 
@@ -33,6 +35,8 @@ extension L10n: CustomStringConvertible {
         return L10n.tr(key: "GeneralConfirm")
       case .generalError:
         return L10n.tr(key: "GeneralError")
+      case .generalStart:
+        return L10n.tr(key: "GeneralStart")
     }
   }
 

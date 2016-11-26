@@ -2,8 +2,18 @@
 //  SplashModule.swift
 //  Compass
 //
-//  Created by Antoine Boileau on 17/11/16.
-//  Copyright © 2016 Antoine Boileau. All rights reserved.
+//  Copyright (c) 2016 Antoine Boileau
+//  MIT License
 //
 
-import Foundation
+import UIKit
+
+class SplashModule {
+
+  var firstViewController: UIViewController {
+    let controller = StoryboardScene.Splash.initialViewController()
+    controller.presenter = SplashPresenter()
+    return controller
+  }
+
+}

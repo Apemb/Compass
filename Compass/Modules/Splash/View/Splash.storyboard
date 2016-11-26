@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iuM-pH-P9e">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="HgN-fr-CAA">
+            <objects>
+                <viewController id="iuM-pH-P9e" customClass="SplashViewController" customModule="Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="759-nF-e2Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="yX1-HU-zT3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vjI-lJ-8iR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Compass_Splash_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="TLA-jD-Ifs">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4xw-3I-X3A">
+                                <rect key="frame" x="167" y="457" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="YYQ-cL-3vb"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="fCb-pZ-sNX"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjV-vB-XAt">
+                                <rect key="frame" x="166.5" y="521" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vjV-vB-XAt" firstAttribute="top" secondItem="4xw-3I-X3A" secondAttribute="bottom" constant="24" id="Fe0-U0-x0S"/>
+                            <constraint firstItem="4xw-3I-X3A" firstAttribute="centerX" secondItem="TLA-jD-Ifs" secondAttribute="centerX" id="RFk-az-dgE"/>
+                            <constraint firstItem="TLA-jD-Ifs" firstAttribute="centerX" secondItem="vjI-lJ-8iR" secondAttribute="centerX" id="VXp-lc-D0Y"/>
+                            <constraint firstItem="TLA-jD-Ifs" firstAttribute="centerY" secondItem="vjI-lJ-8iR" secondAttribute="centerY" id="Xqq-H8-XeR"/>
+                            <constraint firstItem="4xw-3I-X3A" firstAttribute="top" secondItem="TLA-jD-Ifs" secondAttribute="bottom" constant="24" id="qLR-vA-19n"/>
+                            <constraint firstItem="vjV-vB-XAt" firstAttribute="centerX" secondItem="vjI-lJ-8iR" secondAttribute="centerX" id="sfB-Uy-LMT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appNameLabel" destination="vjV-vB-XAt" id="cOv-ak-Thp"/>
+                        <outlet property="spinner" destination="4xw-3I-X3A" id="3qi-rr-uhV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhB-06-hxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-839.20000000000005" y="-161.46926536731635"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Compass_Splash_Icon" width="200" height="200"/>
+    </resources>
+</document>

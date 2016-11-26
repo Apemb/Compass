@@ -1,7 +1,6 @@
 // Generated using SwiftGen, by O.Halligon — https://github.com/AliSoftware/SwiftGen
 // Custom template - putting images in camelCase when written like IC_IMAGE
 
-{% if images %}
 #if os(iOS) || os(tvOS) || os(watchOS)
   import UIKit.UIImage
   typealias Image = UIImage
@@ -14,10 +13,8 @@
 // swiftlint:disable line_length
 
 // swiftlint:disable type_body_length
-enum {{enumName}}: String {
-  {% for image in images %}
-  case {{image|swiftIdentifier|lowercase|snakeToCamelCase|lowerFirstWord}} = "{{image}}"
-  {% endfor %}
+enum Asset: String {
+  case compassSplashIcon = "Compass_Splash_Icon"
 
   var image: Image {
     return Image(asset: self)
@@ -26,10 +23,8 @@ enum {{enumName}}: String {
 // swiftlint:enable type_body_length
 
 extension Image {
-  convenience init!(asset: {{enumName}}) {
+  convenience init!(asset: Asset) {
     self.init(named: asset.rawValue)
   }
 }
-{% else %}
-// No image found
-{% endif %}
+

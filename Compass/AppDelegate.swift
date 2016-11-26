@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Compass
 //
-//  Created by Antoine Boileau on 17/11/16.
-//  Copyright © 2016 Antoine Boileau. All rights reserved.
+//  Copyright (c) 2016 Antoine Boileau
+//  MIT License
 //
 
 import UIKit
@@ -12,10 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
+  var applicationRouter: ApplicationRouter!
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    window = UIWindow(frame: UIScreen.main.bounds)
+    if let window = window {
+      window.makeKeyAndVisible()
+      applicationRouter = ApplicationRouter(window: window)
+    }
     return true
   }
 
