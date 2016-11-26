@@ -1,5 +1,5 @@
 //
-//  SplashPresenter.swift
+//  ApplicationRouter.swift
 //  Compass
 //
 //  Copyright (c) 2016 Antoine Boileau

@@ -15,7 +15,6 @@
 		70455A801DE382AB005A271D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 70455A7F1DE382AB005A271D /* README.md */; };
 		70634C4F1DDDA1C800463D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70634C4E1DDDA1C800463D52 /* AppDelegate.swift */; };
 		70634C591DDDA1C800463D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70634C571DDDA1C800463D52 /* LaunchScreen.storyboard */; };
-		70634C641DDDA1C800463D52 /* CompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70634C631DDDA1C800463D52 /* CompassTests.swift */; };
 		707FC6EA1DE8DBDF00203D7E /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707FC6E91DE8DBDF00203D7E /* Splash.storyboard */; };
 		707FC6ED1DE8DC0B00203D7E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC6EC1DE8DC0B00203D7E /* SplashViewController.swift */; };
 		707FC6EF1DE8E08300203D7E /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC6EE1DE8E08300203D7E /* ApplicationRouter.swift */; };
@@ -23,6 +22,7 @@
 		707FC6FE1DE8FBFD00203D7E /* UIImageGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC6FD1DE8FBFD00203D7E /* UIImageGenerated.swift */; };
 		707FC7001DE9E57700203D7E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 707FC6FF1DE9E57700203D7E /* LICENSE */; };
 		707FC7041DE9EA3700203D7E /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC7031DE9EA3700203D7E /* SplashPresenter.swift */; };
+		707FC7071DE9F0AE00203D7E /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC7061DE9F0AE00203D7E /* SplashPresenterTests.swift */; };
 		8E3D3C46B4F84BA3D838533E /* Pods_CompassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F3230CD4E86590E15922E1 /* Pods_CompassTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,6 @@
 		70634C581DDDA1C800463D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70634C5A1DDDA1C800463D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70634C5F1DDDA1C800463D52 /* CompassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		70634C631DDDA1C800463D52 /* CompassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassTests.swift; sourceTree = "<group>"; };
 		70634C651DDDA1C800463D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		707FC6E91DE8DBDF00203D7E /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = Modules/Splash/View/Splash.storyboard; sourceTree = "<group>"; };
 		707FC6EC1DE8DC0B00203D7E /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = Modules/Splash/View/SplashViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		707FC6FD1DE8FBFD00203D7E /* UIImageGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageGenerated.swift; path = GeneratedFiles/UIImageGenerated.swift; sourceTree = "<group>"; };
 		707FC6FF1DE9E57700203D7E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		707FC7031DE9EA3700203D7E /* SplashPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashPresenter.swift; path = Modules/Splash/Presenter/SplashPresenter.swift; sourceTree = "<group>"; };
+		707FC7061DE9F0AE00203D7E /* SplashPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashPresenterTests.swift; path = Modules/Splash/SplashPresenterTests.swift; sourceTree = "<group>"; };
 		70F3230CD4E86590E15922E1 /* Pods_CompassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCE4B7702D7CF51F2E1BBF8 /* Pods_Compass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Compass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8478C409E302D7AAB820B52F /* Pods-Compass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Compass/Pods-Compass.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,8 +173,8 @@
 		70634C621DDDA1C800463D52 /* CompassTests */ = {
 			isa = PBXGroup;
 			children = (
-				70634C631DDDA1C800463D52 /* CompassTests.swift */,
 				70634C651DDDA1C800463D52 /* Info.plist */,
+				707FC7081DE9F0B200203D7E /* Modules */,
 			);
 			path = CompassTests;
 			sourceTree = "<group>";
@@ -202,6 +202,22 @@
 				707FC7031DE9EA3700203D7E /* SplashPresenter.swift */,
 			);
 			name = Presenter;
+			sourceTree = "<group>";
+		};
+		707FC7081DE9F0B200203D7E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				707FC7091DE9F0BA00203D7E /* Splash */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		707FC7091DE9F0BA00203D7E /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				707FC7061DE9F0AE00203D7E /* SplashPresenterTests.swift */,
+			);
+			name = Splash;
 			sourceTree = "<group>";
 		};
 		F4C7FCC760F867B65A695D47 /* Frameworks */ = {
@@ -466,7 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70634C641DDDA1C800463D52 /* CompassTests.swift in Sources */,
+				707FC7071DE9F0AE00203D7E /* SplashPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

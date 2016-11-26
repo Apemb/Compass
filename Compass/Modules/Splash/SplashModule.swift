@@ -1,5 +1,5 @@
 //
-//  SplashPresenter.swift
+//  SplashModule.swift
 //  Compass
 //
 //  Copyright (c) 2016 Antoine Boileau
@@ -11,7 +11,9 @@ import UIKit
 class SplashModule {
 
   var firstViewController: UIViewController {
-    return StoryboardScene.Splash.initialViewController()
+    let controller = StoryboardScene.Splash.initialViewController()
+    controller.presenter = SplashPresenter()
+    return controller
   }
 
 }

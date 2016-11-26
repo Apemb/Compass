@@ -1,5 +1,5 @@
 // Generated using SwiftGen, by O.Halligon — https://github.com/AliSoftware/SwiftGen
-// Custom template by OCTO - putting images in camelCase when written like IC_IMAGE
+// Custom template - putting images in camelCase when written like IC_IMAGE
 
 {% if images %}
 #if os(iOS) || os(tvOS) || os(watchOS)

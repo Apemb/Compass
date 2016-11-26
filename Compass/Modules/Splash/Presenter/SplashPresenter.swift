@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct SplashPresenter {
+
+  var appNameLabelText: String {
+    return L10n.appName.string
+  }
+
+}

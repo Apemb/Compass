@@ -27,6 +27,8 @@ pod install
 ```
 3 - Have fun ^^
 
+The project is designed using the VIPER Architecture. All the features are build into seperated modules communicating through a router (named "ApplicationRouter - how imaginative of me)
+
 The project has two notable built scripts:
 * swiftlint - a nice linter to make sur the code is nice and tidy
 * swiftgen - an awesome gem making your life easer dealing with images, strings and storybords  

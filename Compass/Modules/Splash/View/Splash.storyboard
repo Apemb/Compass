@@ -31,16 +31,25 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="fCb-pZ-sNX"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjV-vB-XAt">
+                                <rect key="frame" x="166.5" y="521" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="vjV-vB-XAt" firstAttribute="top" secondItem="4xw-3I-X3A" secondAttribute="bottom" constant="24" id="Fe0-U0-x0S"/>
                             <constraint firstItem="4xw-3I-X3A" firstAttribute="centerX" secondItem="TLA-jD-Ifs" secondAttribute="centerX" id="RFk-az-dgE"/>
                             <constraint firstItem="TLA-jD-Ifs" firstAttribute="centerX" secondItem="vjI-lJ-8iR" secondAttribute="centerX" id="VXp-lc-D0Y"/>
                             <constraint firstItem="TLA-jD-Ifs" firstAttribute="centerY" secondItem="vjI-lJ-8iR" secondAttribute="centerY" id="Xqq-H8-XeR"/>
                             <constraint firstItem="4xw-3I-X3A" firstAttribute="top" secondItem="TLA-jD-Ifs" secondAttribute="bottom" constant="24" id="qLR-vA-19n"/>
+                            <constraint firstItem="vjV-vB-XAt" firstAttribute="centerX" secondItem="vjI-lJ-8iR" secondAttribute="centerX" id="sfB-Uy-LMT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="appNameLabel" destination="vjV-vB-XAt" id="cOv-ak-Thp"/>
                         <outlet property="spinner" destination="4xw-3I-X3A" id="3qi-rr-uhV"/>
                     </connections>
                 </viewController>
