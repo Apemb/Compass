@@ -1,5 +1,5 @@
 #!/bin/bash
 babelish csv2string
-echo "extract done"
+echo "extract done"
 cp -R ../Compass/Ressources/en.lproj/Localizable.strings  ../Compass/Ressources/Base.lproj/
-echo "copy en in base done"
+echo "copy 'en' file as 'base' file done"

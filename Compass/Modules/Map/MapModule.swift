@@ -12,7 +12,7 @@ class MapModule {
 
   var firstViewController: UIViewController {
     let controller = StoryboardScene.Map.instantiateMapViewController()
-//    controller.presenter = SplashPresenter()
+    controller.presenter = MapPresenter(delegate: controller)
     return controller
   }
 
