@@ -12,7 +12,6 @@
 		702FAEE31DDE13B100CA6942 /* UIStoryboardGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702FAEE21DDE13B100CA6942 /* UIStoryboardGenerated.swift */; };
 		702FAEE91DDE1BD500CA6942 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 702FAEEB1DDE1BD500CA6942 /* Localizable.strings */; };
 		70455A7E1DE37FBE005A271D /* LocalizableStringsGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70455A7D1DE37FBE005A271D /* LocalizableStringsGenerated.swift */; };
-		70455A801DE382AB005A271D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 70455A7F1DE382AB005A271D /* README.md */; };
 		70634C4F1DDDA1C800463D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70634C4E1DDDA1C800463D52 /* AppDelegate.swift */; };
 		70634C591DDDA1C800463D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70634C571DDDA1C800463D52 /* LaunchScreen.storyboard */; };
 		707FC6EA1DE8DBDF00203D7E /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707FC6E91DE8DBDF00203D7E /* Splash.storyboard */; };
@@ -20,9 +19,14 @@
 		707FC6EF1DE8E08300203D7E /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC6EE1DE8E08300203D7E /* ApplicationRouter.swift */; };
 		707FC6F41DE8F29100203D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 707FC6F31DE8F29100203D7E /* Assets.xcassets */; };
 		707FC6FE1DE8FBFD00203D7E /* UIImageGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC6FD1DE8FBFD00203D7E /* UIImageGenerated.swift */; };
-		707FC7001DE9E57700203D7E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 707FC6FF1DE9E57700203D7E /* LICENSE */; };
 		707FC7041DE9EA3700203D7E /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC7031DE9EA3700203D7E /* SplashPresenter.swift */; };
 		707FC7071DE9F0AE00203D7E /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC7061DE9F0AE00203D7E /* SplashPresenterTests.swift */; };
+		7092FE9F1E058C68009B8DC0 /* ApplicationRouterSplashModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7092FE9E1E058C68009B8DC0 /* ApplicationRouterSplashModule.swift */; };
+		709D66C51DECDF6B006259B0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 707FC6FF1DE9E57700203D7E /* LICENSE */; };
+		709D66C71DECDFA9006259B0 /* ModuleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D66C61DECDFA9006259B0 /* ModuleType.swift */; };
+		709D66C91DECE1E7006259B0 /* MapModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D66C81DECE1E7006259B0 /* MapModule.swift */; };
+		709D66CC1DECE381006259B0 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709D66CB1DECE381006259B0 /* Map.storyboard */; };
+		709D66CF1DECE3A7006259B0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D66CE1DECE3A7006259B0 /* MapViewController.swift */; };
 		8E3D3C46B4F84BA3D838533E /* Pods_CompassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F3230CD4E86590E15922E1 /* Pods_CompassTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +64,11 @@
 		707FC6FF1DE9E57700203D7E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		707FC7031DE9EA3700203D7E /* SplashPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashPresenter.swift; path = Modules/Splash/Presenter/SplashPresenter.swift; sourceTree = "<group>"; };
 		707FC7061DE9F0AE00203D7E /* SplashPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashPresenterTests.swift; path = Modules/Splash/SplashPresenterTests.swift; sourceTree = "<group>"; };
+		7092FE9E1E058C68009B8DC0 /* ApplicationRouterSplashModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationRouterSplashModule.swift; path = ApplicationRouter/ApplicationRouterSplashModule.swift; sourceTree = "<group>"; };
+		709D66C61DECDFA9006259B0 /* ModuleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModuleType.swift; path = Modules/ModuleType.swift; sourceTree = "<group>"; };
+		709D66C81DECE1E7006259B0 /* MapModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapModule.swift; path = Modules/Map/MapModule.swift; sourceTree = "<group>"; };
+		709D66CB1DECE381006259B0 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Map.storyboard; path = Modules/Map/View/Map.storyboard; sourceTree = "<group>"; };
+		709D66CE1DECE3A7006259B0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Modules/Map/View/MapViewController.swift; sourceTree = "<group>"; };
 		70F3230CD4E86590E15922E1 /* Pods_CompassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCE4B7702D7CF51F2E1BBF8 /* Pods_Compass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Compass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8478C409E302D7AAB820B52F /* Pods-Compass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Compass/Pods-Compass.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +109,8 @@
 		702FAEDF1DDE0C3900CA6942 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				709D66C61DECDFA9006259B0 /* ModuleType.swift */,
+				709D66CA1DECE34B006259B0 /* Map */,
 				702FAEE01DDE0C4300CA6942 /* Splash */,
 			);
 			name = Modules;
@@ -192,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				707FC6EE1DE8E08300203D7E /* ApplicationRouter.swift */,
+				7092FE9E1E058C68009B8DC0 /* ApplicationRouterSplashModule.swift */,
 			);
 			name = ApplicationRouter;
 			sourceTree = "<group>";
@@ -218,6 +230,24 @@
 				707FC7061DE9F0AE00203D7E /* SplashPresenterTests.swift */,
 			);
 			name = Splash;
+			sourceTree = "<group>";
+		};
+		709D66CA1DECE34B006259B0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				709D66C81DECE1E7006259B0 /* MapModule.swift */,
+				709D66CD1DECE387006259B0 /* View */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		709D66CD1DECE387006259B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				709D66CB1DECE381006259B0 /* Map.storyboard */,
+				709D66CE1DECE3A7006259B0 /* MapViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		F4C7FCC760F867B65A695D47 /* Frameworks */ = {
@@ -327,7 +357,8 @@
 				70634C591DDDA1C800463D52 /* LaunchScreen.storyboard in Resources */,
 				707FC6F41DE8F29100203D7E /* Assets.xcassets in Resources */,
 				702FAEE91DDE1BD500CA6942 /* Localizable.strings in Resources */,
-				707FC7001DE9E57700203D7E /* LICENSE in Resources */,
+				709D66C51DECDF6B006259B0 /* LICENSE in Resources */,
+				709D66CC1DECE381006259B0 /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,12 +497,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70455A801DE382AB005A271D /* README.md in Sources */,
+				709D66CF1DECE3A7006259B0 /* MapViewController.swift in Sources */,
+				709D66C91DECE1E7006259B0 /* MapModule.swift in Sources */,
 				707FC6FE1DE8FBFD00203D7E /* UIImageGenerated.swift in Sources */,
 				702FAEE31DDE13B100CA6942 /* UIStoryboardGenerated.swift in Sources */,
+				709D66C71DECDFA9006259B0 /* ModuleType.swift in Sources */,
 				70455A7E1DE37FBE005A271D /* LocalizableStringsGenerated.swift in Sources */,
 				702FAEDE1DDE0C2800CA6942 /* SplashModule.swift in Sources */,
 				707FC6EF1DE8E08300203D7E /* ApplicationRouter.swift in Sources */,
+				7092FE9F1E058C68009B8DC0 /* ApplicationRouterSplashModule.swift in Sources */,
 				707FC6ED1DE8DC0B00203D7E /* SplashViewController.swift in Sources */,
 				70634C4F1DDDA1C800463D52 /* AppDelegate.swift in Sources */,
 				707FC7041DE9EA3700203D7E /* SplashPresenter.swift in Sources */,

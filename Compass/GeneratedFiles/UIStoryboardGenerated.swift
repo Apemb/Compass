@@ -44,12 +44,26 @@ struct StoryboardScene {
   enum LaunchScreen: StoryboardSceneType {
     static let storyboardName = "LaunchScreen"
   }
-  enum Splash: StoryboardSceneType {
+  enum Map: String, StoryboardSceneType {
+    static let storyboardName = "Map"
+
+    case mapViewControllerScene = "MapViewController"
+    static func instantiateMapViewController() -> MapViewController {
+      guard let vc = StoryboardScene.Map.mapViewControllerScene.viewController() as? MapViewController
+      else {
+        fatalError("ViewController 'MapViewController' is not of the expected class MapViewController.")
+      }
+      return vc
+    }
+  }
+  enum Splash: String, StoryboardSceneType {
     static let storyboardName = "Splash"
 
-    static func initialViewController() -> SplashViewController {
-      guard let vc = storyboard().instantiateInitialViewController() as? SplashViewController else {
-        fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
+    case splashViewControllerScene = "SplashViewController"
+    static func instantiateSplashViewController() -> SplashViewController {
+      guard let vc = StoryboardScene.Splash.splashViewControllerScene.viewController() as? SplashViewController
+      else {
+        fatalError("ViewController 'SplashViewController' is not of the expected class SplashViewController.")
       }
       return vc
     }
