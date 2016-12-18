@@ -12,7 +12,6 @@
 		702FAEE31DDE13B100CA6942 /* UIStoryboardGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702FAEE21DDE13B100CA6942 /* UIStoryboardGenerated.swift */; };
 		702FAEE91DDE1BD500CA6942 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 702FAEEB1DDE1BD500CA6942 /* Localizable.strings */; };
 		70455A7E1DE37FBE005A271D /* LocalizableStringsGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70455A7D1DE37FBE005A271D /* LocalizableStringsGenerated.swift */; };
-		70455A801DE382AB005A271D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 70455A7F1DE382AB005A271D /* README.md */; };
 		70634C4F1DDDA1C800463D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70634C4E1DDDA1C800463D52 /* AppDelegate.swift */; };
 		70634C591DDDA1C800463D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70634C571DDDA1C800463D52 /* LaunchScreen.storyboard */; };
 		707FC6EA1DE8DBDF00203D7E /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707FC6E91DE8DBDF00203D7E /* Splash.storyboard */; };
@@ -20,9 +19,20 @@
 		707FC6EF1DE8E08300203D7E /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC6EE1DE8E08300203D7E /* ApplicationRouter.swift */; };
 		707FC6F41DE8F29100203D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 707FC6F31DE8F29100203D7E /* Assets.xcassets */; };
 		707FC6FE1DE8FBFD00203D7E /* UIImageGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC6FD1DE8FBFD00203D7E /* UIImageGenerated.swift */; };
-		707FC7001DE9E57700203D7E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 707FC6FF1DE9E57700203D7E /* LICENSE */; };
 		707FC7041DE9EA3700203D7E /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC7031DE9EA3700203D7E /* SplashPresenter.swift */; };
 		707FC7071DE9F0AE00203D7E /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FC7061DE9F0AE00203D7E /* SplashPresenterTests.swift */; };
+		7092FE9F1E058C68009B8DC0 /* ApplicationRouterSplashModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7092FE9E1E058C68009B8DC0 /* ApplicationRouterSplashModule.swift */; };
+		7092FEA11E0592D2009B8DC0 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7092FEA01E0592D2009B8DC0 /* MapPresenter.swift */; };
+		7092FEA41E0592FE009B8DC0 /* MapPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7092FEA31E0592FE009B8DC0 /* MapPresenterTests.swift */; };
+		7092FEA91E059F46009B8DC0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7092FEA81E059F46009B8DC0 /* MapKit.framework */; };
+		7092FEAB1E05ACB3009B8DC0 /* UIColorGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7092FEAA1E05ACB3009B8DC0 /* UIColorGenerated.swift */; };
+		7092FEAD1E06EB8F009B8DC0 /* MapDestinationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7092FEAC1E06EB8F009B8DC0 /* MapDestinationAnnotation.swift */; };
+		7092FEB01E06FC27009B8DC0 /* MapDestinationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7092FEAF1E06FC27009B8DC0 /* MapDestinationAnnotationView.swift */; };
+		709D66C51DECDF6B006259B0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 707FC6FF1DE9E57700203D7E /* LICENSE */; };
+		709D66C71DECDFA9006259B0 /* ModuleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D66C61DECDFA9006259B0 /* ModuleType.swift */; };
+		709D66C91DECE1E7006259B0 /* MapModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D66C81DECE1E7006259B0 /* MapModule.swift */; };
+		709D66CC1DECE381006259B0 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709D66CB1DECE381006259B0 /* Map.storyboard */; };
+		709D66CF1DECE3A7006259B0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D66CE1DECE3A7006259B0 /* MapViewController.swift */; };
 		8E3D3C46B4F84BA3D838533E /* Pods_CompassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F3230CD4E86590E15922E1 /* Pods_CompassTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +69,18 @@
 		707FC6FD1DE8FBFD00203D7E /* UIImageGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageGenerated.swift; path = GeneratedFiles/UIImageGenerated.swift; sourceTree = "<group>"; };
 		707FC6FF1DE9E57700203D7E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		707FC7031DE9EA3700203D7E /* SplashPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashPresenter.swift; path = Modules/Splash/Presenter/SplashPresenter.swift; sourceTree = "<group>"; };
-		707FC7061DE9F0AE00203D7E /* SplashPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashPresenterTests.swift; path = Modules/Splash/SplashPresenterTests.swift; sourceTree = "<group>"; };
+		707FC7061DE9F0AE00203D7E /* SplashPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashPresenterTests.swift; path = Modules/Splash/Presenter/SplashPresenterTests.swift; sourceTree = "<group>"; };
+		7092FE9E1E058C68009B8DC0 /* ApplicationRouterSplashModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationRouterSplashModule.swift; path = ApplicationRouter/ApplicationRouterSplashModule.swift; sourceTree = "<group>"; };
+		7092FEA01E0592D2009B8DC0 /* MapPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPresenter.swift; path = Modules/Map/Presenter/MapPresenter.swift; sourceTree = "<group>"; };
+		7092FEA31E0592FE009B8DC0 /* MapPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPresenterTests.swift; path = Modules/Map/Presenter/MapPresenterTests.swift; sourceTree = "<group>"; };
+		7092FEA81E059F46009B8DC0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7092FEAA1E05ACB3009B8DC0 /* UIColorGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorGenerated.swift; path = GeneratedFiles/UIColorGenerated.swift; sourceTree = "<group>"; };
+		7092FEAC1E06EB8F009B8DC0 /* MapDestinationAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapDestinationAnnotation.swift; path = Modules/Map/Entities/MapDestinationAnnotation.swift; sourceTree = "<group>"; };
+		7092FEAF1E06FC27009B8DC0 /* MapDestinationAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapDestinationAnnotationView.swift; path = Modules/Map/View/MapDestinationAnnotationView.swift; sourceTree = "<group>"; };
+		709D66C61DECDFA9006259B0 /* ModuleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModuleType.swift; path = Modules/ModuleType.swift; sourceTree = "<group>"; };
+		709D66C81DECE1E7006259B0 /* MapModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapModule.swift; path = Modules/Map/MapModule.swift; sourceTree = "<group>"; };
+		709D66CB1DECE381006259B0 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Map.storyboard; path = Modules/Map/View/Map.storyboard; sourceTree = "<group>"; };
+		709D66CE1DECE3A7006259B0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Modules/Map/View/MapViewController.swift; sourceTree = "<group>"; };
 		70F3230CD4E86590E15922E1 /* Pods_CompassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCE4B7702D7CF51F2E1BBF8 /* Pods_Compass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Compass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8478C409E302D7AAB820B52F /* Pods-Compass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Compass/Pods-Compass.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7092FEA91E059F46009B8DC0 /* MapKit.framework in Frameworks */,
 				1505F84C218218F0C660BA3F /* Pods_Compass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +122,8 @@
 		702FAEDF1DDE0C3900CA6942 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				709D66C61DECDFA9006259B0 /* ModuleType.swift */,
+				709D66CA1DECE34B006259B0 /* Map */,
 				702FAEE01DDE0C4300CA6942 /* Splash */,
 			);
 			name = Modules;
@@ -118,6 +142,7 @@
 		702FAEE41DDE13B400CA6942 /* GeneratedFiles */ = {
 			isa = PBXGroup;
 			children = (
+				7092FEAA1E05ACB3009B8DC0 /* UIColorGenerated.swift */,
 				702FAEE21DDE13B100CA6942 /* UIStoryboardGenerated.swift */,
 				70455A7D1DE37FBE005A271D /* LocalizableStringsGenerated.swift */,
 				707FC6FD1DE8FBFD00203D7E /* UIImageGenerated.swift */,
@@ -192,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				707FC6EE1DE8E08300203D7E /* ApplicationRouter.swift */,
+				7092FE9E1E058C68009B8DC0 /* ApplicationRouterSplashModule.swift */,
 			);
 			name = ApplicationRouter;
 			sourceTree = "<group>";
@@ -208,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				707FC7091DE9F0BA00203D7E /* Splash */,
+				7092FEA51E059301009B8DC0 /* Map */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -215,14 +242,76 @@
 		707FC7091DE9F0BA00203D7E /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				707FC7061DE9F0AE00203D7E /* SplashPresenterTests.swift */,
+				7092FEA71E05932B009B8DC0 /* Presenter */,
 			);
 			name = Splash;
+			sourceTree = "<group>";
+		};
+		7092FEA21E0592D7009B8DC0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7092FEA01E0592D2009B8DC0 /* MapPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		7092FEA51E059301009B8DC0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				7092FEA61E059308009B8DC0 /* Presenter */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		7092FEA61E059308009B8DC0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7092FEA31E0592FE009B8DC0 /* MapPresenterTests.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		7092FEA71E05932B009B8DC0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				707FC7061DE9F0AE00203D7E /* SplashPresenterTests.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		7092FEAE1E06EB92009B8DC0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7092FEAC1E06EB8F009B8DC0 /* MapDestinationAnnotation.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		709D66CA1DECE34B006259B0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				709D66C81DECE1E7006259B0 /* MapModule.swift */,
+				7092FEAE1E06EB92009B8DC0 /* Entities */,
+				7092FEA21E0592D7009B8DC0 /* Presenter */,
+				709D66CD1DECE387006259B0 /* View */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		709D66CD1DECE387006259B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				709D66CB1DECE381006259B0 /* Map.storyboard */,
+				709D66CE1DECE3A7006259B0 /* MapViewController.swift */,
+				7092FEAF1E06FC27009B8DC0 /* MapDestinationAnnotationView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		F4C7FCC760F867B65A695D47 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7092FEA81E059F46009B8DC0 /* MapKit.framework */,
 				7FCE4B7702D7CF51F2E1BBF8 /* Pods_Compass.framework */,
 				70F3230CD4E86590E15922E1 /* Pods_CompassTests.framework */,
 			);
@@ -237,9 +326,9 @@
 			buildConfigurationList = 70634C681DDDA1C800463D52 /* Build configuration list for PBXNativeTarget "Compass" */;
 			buildPhases = (
 				12698187FEE8903CF872B2BB /* [CP] Check Pods Manifest.lock */,
-				70455A811DE39198005A271D /* SwiftLint */,
 				702FAEE11DDE0DF300CA6942 /* SwiftGen */,
 				70634C471DDDA1C700463D52 /* Sources */,
+				70455A811DE39198005A271D /* SwiftLint */,
 				70634C481DDDA1C700463D52 /* Frameworks */,
 				70634C491DDDA1C700463D52 /* Resources */,
 				D22231EF986270F90FBCD3B3 /* [CP] Embed Pods Frameworks */,
@@ -289,6 +378,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 5QRXERJ4KY;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					70634C5E1DDDA1C800463D52 = {
 						CreatedOnToolsVersion = 8.1;
@@ -327,7 +421,8 @@
 				70634C591DDDA1C800463D52 /* LaunchScreen.storyboard in Resources */,
 				707FC6F41DE8F29100203D7E /* Assets.xcassets in Resources */,
 				702FAEE91DDE1BD500CA6942 /* Localizable.strings in Resources */,
-				707FC7001DE9E57700203D7E /* LICENSE in Resources */,
+				709D66C51DECDF6B006259B0 /* LICENSE in Resources */,
+				709D66CC1DECE381006259B0 /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +493,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen storyboards -t swift3 ./Compass > ./Compass/GeneratedFiles/UIStoryboardGenerated.swift\n$PODS_ROOT/SwiftGen/bin/swiftgen images --templatePath ./Scripts/images-bundle-swift3.stencil ./Compass/Ressources > ./Compass/GeneratedFiles/UIImageGenerated.swift\n$PODS_ROOT/SwiftGen/bin/swiftgen strings -t swift3 ./Compass/Ressources/Base.lproj/Localizable.strings > ./Compass/GeneratedFiles/LocalizableStringsGenerated.swift";
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen storyboards -t swift3 ./Compass > ./Compass/GeneratedFiles/UIStoryboardGenerated.swift\n$PODS_ROOT/SwiftGen/bin/swiftgen images --templatePath ./Scripts/images-bundle-swift3.stencil ./Compass/Ressources/Assets.xcassets > ./Compass/GeneratedFiles/UIImageGenerated.swift\n$PODS_ROOT/SwiftGen/bin/swiftgen strings -t swift3 ./Compass/Ressources/Base.lproj/Localizable.strings > ./Compass/GeneratedFiles/LocalizableStringsGenerated.swift\n$PODS_ROOT/SwiftGen/bin/swiftgen colors -t swift3 ./Scripts/colors.txt > ./Compass/GeneratedFiles/UIColorGenerated.swift";
 		};
 		70455A811DE39198005A271D /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -466,15 +561,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70455A801DE382AB005A271D /* README.md in Sources */,
+				709D66CF1DECE3A7006259B0 /* MapViewController.swift in Sources */,
+				709D66C91DECE1E7006259B0 /* MapModule.swift in Sources */,
+				7092FEA11E0592D2009B8DC0 /* MapPresenter.swift in Sources */,
 				707FC6FE1DE8FBFD00203D7E /* UIImageGenerated.swift in Sources */,
 				702FAEE31DDE13B100CA6942 /* UIStoryboardGenerated.swift in Sources */,
+				709D66C71DECDFA9006259B0 /* ModuleType.swift in Sources */,
 				70455A7E1DE37FBE005A271D /* LocalizableStringsGenerated.swift in Sources */,
 				702FAEDE1DDE0C2800CA6942 /* SplashModule.swift in Sources */,
+				7092FEAD1E06EB8F009B8DC0 /* MapDestinationAnnotation.swift in Sources */,
 				707FC6EF1DE8E08300203D7E /* ApplicationRouter.swift in Sources */,
+				7092FE9F1E058C68009B8DC0 /* ApplicationRouterSplashModule.swift in Sources */,
 				707FC6ED1DE8DC0B00203D7E /* SplashViewController.swift in Sources */,
 				70634C4F1DDDA1C800463D52 /* AppDelegate.swift in Sources */,
 				707FC7041DE9EA3700203D7E /* SplashPresenter.swift in Sources */,
+				7092FEAB1E05ACB3009B8DC0 /* UIColorGenerated.swift in Sources */,
+				7092FEB01E06FC27009B8DC0 /* MapDestinationAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				707FC7071DE9F0AE00203D7E /* SplashPresenterTests.swift in Sources */,
+				7092FEA41E0592FE009B8DC0 /* MapPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

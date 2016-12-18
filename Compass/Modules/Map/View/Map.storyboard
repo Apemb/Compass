@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MapViewController-->
+        <scene sceneID="MBq-Yt-ZQl">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" title="MapViewController" id="X6M-OT-OGB" customClass="MapViewController" customModule="Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wJF-JK-T12"/>
+                        <viewControllerLayoutGuide type="bottom" id="U0R-lj-k6i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u2c-84-JFb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8k-JF-HnN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRm-UE-A6t">
+                                <rect key="frame" x="303" y="595" width="22" height="22"/>
+                                <connections>
+                                    <action selector="localizeMeButtonTapped" destination="X6M-OT-OGB" eventType="touchUpInside" id="tQp-uN-cnI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y8k-JF-HnN" firstAttribute="leading" secondItem="u2c-84-JFb" secondAttribute="leading" id="3nK-5O-CwY"/>
+                            <constraint firstItem="y8k-JF-HnN" firstAttribute="top" secondItem="wJF-JK-T12" secondAttribute="bottom" id="Heb-PQ-i2k"/>
+                            <constraint firstAttribute="trailing" secondItem="nRm-UE-A6t" secondAttribute="trailing" constant="50" id="ea5-7S-sEQ"/>
+                            <constraint firstAttribute="trailing" secondItem="y8k-JF-HnN" secondAttribute="trailing" id="p6w-SV-JS6"/>
+                            <constraint firstItem="U0R-lj-k6i" firstAttribute="top" secondItem="nRm-UE-A6t" secondAttribute="bottom" constant="50" id="pex-HF-tWZ"/>
+                            <constraint firstItem="U0R-lj-k6i" firstAttribute="top" secondItem="y8k-JF-HnN" secondAttribute="bottom" id="rqt-68-2da"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="localizeMeButton" destination="nRm-UE-A6t" id="cPH-Ec-811"/>
+                        <outlet property="mapView" destination="y8k-JF-HnN" id="UZB-FR-41k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8B-NE-UpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2" y="-52"/>
+        </scene>
+    </scenes>
+</document>

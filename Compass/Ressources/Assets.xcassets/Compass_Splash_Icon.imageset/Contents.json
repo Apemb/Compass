@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Compass_Splash_Icon.jpg",
+      "filename" : "Compass_Splash_Icon.jpeg",
       "scale" : "1x"
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "Compass_Splash_Icon@3x.jpg",
+      "filename" : "Compass_Splash_Icon@3x.jpeg",
       "scale" : "3x"
     }
   ],

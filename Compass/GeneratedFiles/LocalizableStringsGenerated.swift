@@ -3,20 +3,24 @@
 import Foundation
 
 // swiftlint:disable file_length
+// swiftlint:disable line_length
+
 // swiftlint:disable type_body_length
 enum L10n {
   /// Compass
   case appName
-  /// Ok
-  case generalOk
   /// Cancel
   case generalCancel
   /// Confirm
   case generalConfirm
   /// Error
   case generalError
+  /// Ok
+  case generalOk
   /// Start
   case generalStart
+  /// Map
+  case mapScreenTitle
 }
 // swiftlint:enable type_body_length
 
@@ -27,16 +31,18 @@ extension L10n: CustomStringConvertible {
     switch self {
       case .appName:
         return L10n.tr(key: "AppName")
-      case .generalOk:
-        return L10n.tr(key: "GeneralOk")
       case .generalCancel:
         return L10n.tr(key: "GeneralCancel")
       case .generalConfirm:
         return L10n.tr(key: "GeneralConfirm")
       case .generalError:
         return L10n.tr(key: "GeneralError")
+      case .generalOk:
+        return L10n.tr(key: "GeneralOk")
       case .generalStart:
         return L10n.tr(key: "GeneralStart")
+      case .mapScreenTitle:
+        return L10n.tr(key: "MapScreenTitle")
     }
   }
 
@@ -46,7 +52,6 @@ extension L10n: CustomStringConvertible {
   }
 }
 
-func tr(key: L10n) -> String {
+func tr(_ key: L10n) -> String {
   return key.string
 }
-
