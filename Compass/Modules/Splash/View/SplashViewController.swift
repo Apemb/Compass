@@ -40,7 +40,6 @@ class SplashViewController: UIViewController {
     super.viewDidAppear(animated)
     presenter.viewDidAppear()
   }
-
 }
 
 extension SplashViewController: SplashPresenterDelegate {

@@ -59,7 +59,6 @@ class MapViewController: UIViewController {
                                                          action:#selector(MapViewController.handleLongTap(_:)))
 
     mapView.addGestureRecognizer(gestureRecognizer)
-
   }
 
   private func setupPermissionScope() {

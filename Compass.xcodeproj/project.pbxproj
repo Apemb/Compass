@@ -28,6 +28,8 @@
 		7092FEAB1E05ACB3009B8DC0 /* UIColorGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7092FEAA1E05ACB3009B8DC0 /* UIColorGenerated.swift */; };
 		7092FEAD1E06EB8F009B8DC0 /* MapDestinationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7092FEAC1E06EB8F009B8DC0 /* MapDestinationAnnotation.swift */; };
 		7092FEB01E06FC27009B8DC0 /* MapDestinationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7092FEAF1E06FC27009B8DC0 /* MapDestinationAnnotationView.swift */; };
+		7092FEB21E072343009B8DC0 /* CLLocationBearing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7092FEB11E072343009B8DC0 /* CLLocationBearing.swift */; };
+		7092FEB61E0723F5009B8DC0 /* CLLocationBearingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7092FEB51E0723F5009B8DC0 /* CLLocationBearingTests.swift */; };
 		709D66C51DECDF6B006259B0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 707FC6FF1DE9E57700203D7E /* LICENSE */; };
 		709D66C71DECDFA9006259B0 /* ModuleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D66C61DECDFA9006259B0 /* ModuleType.swift */; };
 		709D66C91DECE1E7006259B0 /* MapModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D66C81DECE1E7006259B0 /* MapModule.swift */; };
@@ -77,6 +79,8 @@
 		7092FEAA1E05ACB3009B8DC0 /* UIColorGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorGenerated.swift; path = GeneratedFiles/UIColorGenerated.swift; sourceTree = "<group>"; };
 		7092FEAC1E06EB8F009B8DC0 /* MapDestinationAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapDestinationAnnotation.swift; path = Modules/Map/Entities/MapDestinationAnnotation.swift; sourceTree = "<group>"; };
 		7092FEAF1E06FC27009B8DC0 /* MapDestinationAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapDestinationAnnotationView.swift; path = Modules/Map/View/MapDestinationAnnotationView.swift; sourceTree = "<group>"; };
+		7092FEB11E072343009B8DC0 /* CLLocationBearing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CLLocationBearing.swift; path = Services/Bearing/CLLocationBearing.swift; sourceTree = "<group>"; };
+		7092FEB51E0723F5009B8DC0 /* CLLocationBearingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CLLocationBearingTests.swift; path = Services/Bearing/CLLocationBearingTests.swift; sourceTree = "<group>"; };
 		709D66C61DECDFA9006259B0 /* ModuleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModuleType.swift; path = Modules/ModuleType.swift; sourceTree = "<group>"; };
 		709D66C81DECE1E7006259B0 /* MapModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapModule.swift; path = Modules/Map/MapModule.swift; sourceTree = "<group>"; };
 		709D66CB1DECE381006259B0 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Map.storyboard; path = Modules/Map/View/Map.storyboard; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 				70634C4E1DDDA1C800463D52 /* AppDelegate.swift */,
 				70634C571DDDA1C800463D52 /* LaunchScreen.storyboard */,
 				707FC6F01DE8E08700203D7E /* ApplicationRouter */,
+				7092FEB31E07239F009B8DC0 /* Services */,
 				702FAEDF1DDE0C3900CA6942 /* Modules */,
 				702FAEE61DDE1B4B00CA6942 /* Ressources */,
 				702FAEE41DDE13B400CA6942 /* GeneratedFiles */,
@@ -199,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				70634C651DDDA1C800463D52 /* Info.plist */,
+				7092FEB71E0723FA009B8DC0 /* Services */,
 				707FC7081DE9F0B200203D7E /* Modules */,
 			);
 			path = CompassTests;
@@ -285,6 +291,38 @@
 				7092FEAC1E06EB8F009B8DC0 /* MapDestinationAnnotation.swift */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		7092FEB31E07239F009B8DC0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7092FEB41E0723AB009B8DC0 /* Bearing */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		7092FEB41E0723AB009B8DC0 /* Bearing */ = {
+			isa = PBXGroup;
+			children = (
+				7092FEB11E072343009B8DC0 /* CLLocationBearing.swift */,
+			);
+			name = Bearing;
+			sourceTree = "<group>";
+		};
+		7092FEB71E0723FA009B8DC0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7092FEB81E072401009B8DC0 /* Bearing */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		7092FEB81E072401009B8DC0 /* Bearing */ = {
+			isa = PBXGroup;
+			children = (
+				7092FEB51E0723F5009B8DC0 /* CLLocationBearingTests.swift */,
+			);
+			name = Bearing;
 			sourceTree = "<group>";
 		};
 		709D66CA1DECE34B006259B0 /* Map */ = {
@@ -576,6 +614,7 @@
 				70634C4F1DDDA1C800463D52 /* AppDelegate.swift in Sources */,
 				707FC7041DE9EA3700203D7E /* SplashPresenter.swift in Sources */,
 				7092FEAB1E05ACB3009B8DC0 /* UIColorGenerated.swift in Sources */,
+				7092FEB21E072343009B8DC0 /* CLLocationBearing.swift in Sources */,
 				7092FEB01E06FC27009B8DC0 /* MapDestinationAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,6 +625,7 @@
 			files = (
 				707FC7071DE9F0AE00203D7E /* SplashPresenterTests.swift in Sources */,
 				7092FEA41E0592FE009B8DC0 /* MapPresenterTests.swift in Sources */,
+				7092FEB61E0723F5009B8DC0 /* CLLocationBearingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

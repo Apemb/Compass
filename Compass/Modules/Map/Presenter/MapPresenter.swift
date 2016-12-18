@@ -31,9 +31,7 @@ struct MapPresenter {
     delegate.centerMapOnCurrentLocation()
   }
 
-  func locationPermissionCanceled() {
-
-  }
+  func locationPermissionCanceled() {}
 
   // *********************************************************************
   // MARK: - Action Management
