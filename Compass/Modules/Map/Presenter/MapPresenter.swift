@@ -6,10 +6,11 @@
 //  MIT License
 //
 
-import Foundation
+import MapKit
 
 protocol MapPresenterDelegate {
   func centerMapOnCurrentLocation()
+  func addDestination(_ destination: MapDestinationAnnotation)
 }
 
 struct MapPresenter {
@@ -40,5 +41,9 @@ struct MapPresenter {
     if authorized == true {
       delegate.centerMapOnCurrentLocation()
     }
+  }
+
+  func handleLongTap(at coordinate: CLLocationCoordinate2D) {
+    delegate.addDestination(MapDestinationAnnotation(coordinate: coordinate))
   }
 }

@@ -18,10 +18,20 @@ class MapViewController: UIViewController {
 
   // *********************************************************************
   // MARK: - Properties
-//  var delegate: SplashViewControllerDelegate?
+  //  var delegate: SplashViewControllerDelegate?
   var presenter: MapPresenter!
 
   var userLocation: CLLocation?
+  var destinationAnnotation: MapDestinationAnnotation? {
+    didSet {
+      if let annotation = destinationAnnotation {
+          mapView.addAnnotation(annotation)
+      }
+      if let oldValue = oldValue {
+        mapView.removeAnnotation(oldValue)
+      }
+    }
+  }
 
   fileprivate let permissionScope = PermissionScope()
   fileprivate var permissionAlreadyRequested = false
@@ -34,9 +44,25 @@ class MapViewController: UIViewController {
     super.viewDidLoad()
     title = presenter.title
 
+    setupMapView()
+    setupTouchRecognizer()
+    setupPermissionScope()
+  }
+
+  private func setupMapView() {
     mapView.showsUserLocation = true
     mapView.delegate = self
+  }
 
+  private func setupTouchRecognizer() {
+    let gestureRecognizer = UILongPressGestureRecognizer(target: self,
+                                                         action:#selector(MapViewController.handleLongTap(_:)))
+
+    mapView.addGestureRecognizer(gestureRecognizer)
+
+  }
+
+  private func setupPermissionScope() {
     permissionAlreadyRequested = false
     permissionScope.addPermission(LocationAlwaysPermission(),
                                   message: "Compass needs that")
@@ -49,6 +75,18 @@ class MapViewController: UIViewController {
     permissionCanceled = false
     permissionAlreadyRequested = false
     presenter.localizeMeButtonTappedWithLocationAuthorized(authorized)
+  }
+
+  func handleLongTap(_ gestureReconizer: UILongPressGestureRecognizer) {
+    let tapLocation = gestureReconizer.location(in: mapView)
+    let coordinate = mapView.convert(tapLocation,
+                                     toCoordinateFrom: mapView)
+
+    presenter.handleLongTap(at: coordinate)
+    // Add annotation:
+    //    let annotation = MKPointAnnotation()
+    //    annotation.coordinate = coordinate
+    //    mapView.addAnnotation(annotation)
   }
 
   // *********************************************************************
@@ -79,6 +117,8 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MKMapViewDelegate {
+  // *********************************************************************
+  // MARK: - MKMapViewDelegate
 
   func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
     if !permissionAlreadyRequested {
@@ -92,9 +132,18 @@ extension MapViewController: MKMapViewDelegate {
       centerMapOnCurrentLocation()
     }
   }
+
+  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    guard let annotation = annotation as? MapDestinationAnnotation else {
+      return nil
+    }
+    return MapDestinationAnnotationView(annotation: annotation)
+  }
 }
 
 extension MapViewController: MapPresenterDelegate {
+  // *********************************************************************
+  // MARK: - MapPresenterDelegate
   func centerMapOnCurrentLocation() {
     guard let location = userLocation?.coordinate else {
       userLocationUpdateNeeded = !permissionCanceled
@@ -105,8 +154,11 @@ extension MapViewController: MapPresenterDelegate {
     centerMap(on: location)
   }
 
+  func addDestination(_ destination: MapDestinationAnnotation) {
+    destinationAnnotation = destination
+  }
+
   private func centerMap(on location: CLLocationCoordinate2D) {
-    mapView.setCenter(location, animated: true)
     let region = MKCoordinateRegionMakeWithDistance(location,
                                                     presenter.mapDistance,
                                                     presenter.mapDistance)

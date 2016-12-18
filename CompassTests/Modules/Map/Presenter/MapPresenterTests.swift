@@ -8,6 +8,7 @@
 
 import Quick
 import Nimble
+import MapKit
 
 @testable import Compass
 
@@ -15,15 +16,20 @@ extension MapPresenterTests: MapPresenterDelegate {
   func centerMapOnCurrentLocation() {
     funcCalledCenterMapOnCurrentLocation = true
   }
+  func addDestination(_ destination: MapDestinationAnnotation) {
+    annotationToAdd = destination
+  }
 }
 
 class MapPresenterTests: QuickSpec {
 
   var funcCalledCenterMapOnCurrentLocation = false
+  var annotationToAdd: MKAnnotation?
 
   override func spec() {
     beforeEach {
       self.funcCalledCenterMapOnCurrentLocation = false
+      self.annotationToAdd = nil
     }
     describe("MapPresenter") {
       describe("mapDistance") {
@@ -89,6 +95,22 @@ class MapPresenterTests: QuickSpec {
 
             //Assert
             expect(self.funcCalledCenterMapOnCurrentLocation).to(beFalse())
+          }
+        }
+      }
+      describe("handleLongTap") {
+        context("whenever") {
+          it("should call delegate.addAnnotation with the annotation at the right coordinate") {
+            //Arrange
+            let presenter = MapPresenter(delegate: self)
+            let expectedCoordinate = CLLocationCoordinate2D(latitude: 23, longitude: 43)
+
+            //Act
+            presenter.handleLongTap(at: expectedCoordinate)
+
+            //Assert
+            expect(self.annotationToAdd?.coordinate.latitude).to(equal(expectedCoordinate.latitude))
+            expect(self.annotationToAdd?.coordinate.longitude).to(equal(expectedCoordinate.longitude))
           }
         }
       }
