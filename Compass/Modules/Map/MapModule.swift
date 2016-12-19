@@ -12,7 +12,8 @@ class MapModule {
 
   var firstViewController: UIViewController {
     let controller = StoryboardScene.Map.instantiateMapViewController()
-    controller.presenter = MapPresenter(delegate: controller)
+    controller.presenter = MapPresenter(delegate: controller,
+                                        interactor: MapInteractor())
     return controller
   }
 

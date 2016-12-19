@@ -57,7 +57,7 @@ extension SplashViewController: SplashPresenterDelegate {
                    initialSpringVelocity: 1.0,
                    options: UIViewAnimationOptions.curveEaseOut,
                    animations: {
-                    self.logoImageView.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2)
+                    self.logoImageView.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/4)
     },
                    completion: { _ -> Void in
                     self.presenter.animationsCompleted()

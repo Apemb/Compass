@@ -15,13 +15,15 @@ class MapViewController: UIViewController {
   // MARK: - IBOutlets
   @IBOutlet weak var mapView: MKMapView!
   @IBOutlet weak var localizeMeButton: UIButton!
+  @IBOutlet weak var bottomBarView: UIView!
+  @IBOutlet weak var bottomBarLabel: UILabel!
 
   // *********************************************************************
   // MARK: - Properties
-  //  var delegate: SplashViewControllerDelegate?
   var presenter: MapPresenter!
 
   var userLocation: CLLocation?
+
   var destinationAnnotation: MapDestinationAnnotation? {
     didSet {
       if let annotation = destinationAnnotation {
@@ -47,6 +49,7 @@ class MapViewController: UIViewController {
     setupMapView()
     setupTouchRecognizer()
     setupPermissionScope()
+    setupBottomBar()
   }
 
   private func setupMapView() {
@@ -67,6 +70,13 @@ class MapViewController: UIViewController {
                                   message: "Compass needs that")
   }
 
+  private func setupBottomBar() {
+    bottomBarView.isOpaque = false
+    bottomBarView.backgroundColor = Color.white.withAlphaComponent(0.95)
+    bottomBarLabel.textAlignment = .center
+    bottomBarLabel.text = presenter.bottomBarLabelText
+  }
+
   // *********************************************************************
   // MARK: - IBActions
   @IBAction func localizeMeButtonTapped() {
@@ -77,15 +87,14 @@ class MapViewController: UIViewController {
   }
 
   func handleLongTap(_ gestureReconizer: UILongPressGestureRecognizer) {
+    guard gestureReconizer.state == .ended else {
+      return
+    }
     let tapLocation = gestureReconizer.location(in: mapView)
     let coordinate = mapView.convert(tapLocation,
                                      toCoordinateFrom: mapView)
 
     presenter.handleLongTap(at: coordinate)
-    // Add annotation:
-    //    let annotation = MKPointAnnotation()
-    //    annotation.coordinate = coordinate
-    //    mapView.addAnnotation(annotation)
   }
 
   // *********************************************************************

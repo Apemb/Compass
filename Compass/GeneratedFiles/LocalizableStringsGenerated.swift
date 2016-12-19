@@ -21,6 +21,8 @@ enum L10n {
   case generalStart
   /// Map
   case mapScreenTitle
+  /// Select destination
+  case mapSelectDestination
 }
 // swiftlint:enable type_body_length
 
@@ -43,6 +45,8 @@ extension L10n: CustomStringConvertible {
         return L10n.tr(key: "GeneralStart")
       case .mapScreenTitle:
         return L10n.tr(key: "MapScreenTitle")
+      case .mapSelectDestination:
+        return L10n.tr(key: "MapSelectDestination")
     }
   }
 

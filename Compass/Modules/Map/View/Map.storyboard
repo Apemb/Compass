@@ -30,25 +30,47 @@
                                     <action selector="localizeMeButtonTapped" destination="X6M-OT-OGB" eventType="touchUpInside" id="tQp-uN-cnI"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBp-bS-Jmf">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r43-aH-usC">
+                                        <rect key="frame" x="166" y="9.5" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="r43-aH-usC" firstAttribute="centerY" secondItem="nBp-bS-Jmf" secondAttribute="centerY" id="BgF-U2-j5c"/>
+                                    <constraint firstItem="r43-aH-usC" firstAttribute="centerX" secondItem="nBp-bS-Jmf" secondAttribute="centerX" id="XlE-mh-uUp"/>
+                                    <constraint firstAttribute="height" constant="40" id="Yhs-3P-5BT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nBp-bS-Jmf" secondAttribute="bottom" id="0dH-XT-RKc"/>
                             <constraint firstItem="y8k-JF-HnN" firstAttribute="leading" secondItem="u2c-84-JFb" secondAttribute="leading" id="3nK-5O-CwY"/>
                             <constraint firstItem="y8k-JF-HnN" firstAttribute="top" secondItem="wJF-JK-T12" secondAttribute="bottom" id="Heb-PQ-i2k"/>
                             <constraint firstAttribute="trailing" secondItem="nRm-UE-A6t" secondAttribute="trailing" constant="50" id="ea5-7S-sEQ"/>
+                            <constraint firstAttribute="trailing" secondItem="nBp-bS-Jmf" secondAttribute="trailing" id="enO-Or-SIM"/>
+                            <constraint firstItem="nBp-bS-Jmf" firstAttribute="leading" secondItem="u2c-84-JFb" secondAttribute="leading" id="fza-6M-uam"/>
                             <constraint firstAttribute="trailing" secondItem="y8k-JF-HnN" secondAttribute="trailing" id="p6w-SV-JS6"/>
                             <constraint firstItem="U0R-lj-k6i" firstAttribute="top" secondItem="nRm-UE-A6t" secondAttribute="bottom" constant="50" id="pex-HF-tWZ"/>
                             <constraint firstItem="U0R-lj-k6i" firstAttribute="top" secondItem="y8k-JF-HnN" secondAttribute="bottom" id="rqt-68-2da"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomBarLabel" destination="r43-aH-usC" id="ARx-J0-6g7"/>
+                        <outlet property="bottomBarView" destination="nBp-bS-Jmf" id="PGv-wB-cQv"/>
                         <outlet property="localizeMeButton" destination="nRm-UE-A6t" id="cPH-Ec-811"/>
                         <outlet property="mapView" destination="y8k-JF-HnN" id="UZB-FR-41k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8B-NE-UpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2" y="-52"/>
+            <point key="canvasLocation" x="0.80000000000000004" y="-52.623688155922046"/>
         </scene>
     </scenes>
 </document>

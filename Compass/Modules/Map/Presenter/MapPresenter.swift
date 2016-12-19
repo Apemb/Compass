@@ -16,6 +16,7 @@ protocol MapPresenterDelegate {
 struct MapPresenter {
 
   let delegate: MapPresenterDelegate
+  let interactor: MapInteractorProtocol
 
   var mapDistance: Double {
     return 1000
@@ -23,6 +24,10 @@ struct MapPresenter {
 
   var title: String {
     return L10n.mapScreenTitle.string
+  }
+
+  var bottomBarLabelText: String {
+    return L10n.mapSelectDestination.string
   }
 
   // *********************************************************************
