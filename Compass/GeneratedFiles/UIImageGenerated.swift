@@ -15,7 +15,7 @@
 // swiftlint:disable type_body_length
 enum Asset: String {
   case arrivalIcon = "Arrival_Icon"
-  case compassSplashIcon = "Compass_Splash_Icon"
+  case compassIcon = "Compass_Icon"
 
   var image: Image {
     return Image(asset: self)

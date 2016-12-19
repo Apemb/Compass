@@ -21,22 +21,31 @@ extension MapPresenterTests: MapPresenterDelegate {
   }
 }
 
+fileprivate struct MockInteractor: MapInteractorProtocol {
+  var destination: CLLocation? = nil
+  var bearingToDestination: Double? = nil
+  func setDestination(to destination: CLLocationCoordinate2D) {}
+}
 class MapPresenterTests: QuickSpec {
 
   var funcCalledCenterMapOnCurrentLocation = false
   var annotationToAdd: MKAnnotation?
+  fileprivate var interactor: MockInteractor!
 
+  //swiftlint:disable:next function_body_length
   override func spec() {
     beforeEach {
       self.funcCalledCenterMapOnCurrentLocation = false
       self.annotationToAdd = nil
+      self.interactor = MockInteractor()
     }
     describe("MapPresenter") {
       describe("mapDistance") {
         context("whenever") {
           it("should return 1000") {
             //Arrange
-            let presenter = MapPresenter(delegate: self)
+            let presenter = MapPresenter(delegate: self,
+                                         interactor: self.interactor)
 
             //Act
             let appName = presenter.mapDistance
@@ -50,7 +59,8 @@ class MapPresenterTests: QuickSpec {
         context("whenever") {
           it("should return Compass") {
             //Arrange
-            let presenter = MapPresenter(delegate: self)
+            let presenter = MapPresenter(delegate: self,
+                                         interactor: self.interactor)
 
             //Act
             let appName = presenter.title
@@ -60,11 +70,27 @@ class MapPresenterTests: QuickSpec {
           }
         }
       }
+      describe("bottomBarLabelText") {
+        context("when no destination selected") {
+          it("should return Select Destination") {
+            //Arrange
+            let presenter = MapPresenter(delegate: self,
+                                         interactor: self.interactor)
+
+            //Act
+            let bottomBarLabelText = presenter.bottomBarLabelText
+
+            //Assert
+            expect(bottomBarLabelText).to(equal("Select destination"))
+          }
+        }
+      }
       describe("locationPermissionAuthorized") {
         context("whenever") {
           it("should call delegate.centerMapOnCurrentLocation") {
             //Arrange
-            let presenter = MapPresenter(delegate: self)
+            let presenter = MapPresenter(delegate: self,
+                                         interactor: self.interactor)
 
             //Act
             presenter.locationPermissionAuthorized()
@@ -78,7 +104,8 @@ class MapPresenterTests: QuickSpec {
         context("whenever") {
           it("should call delegate.centerMapOnCurrentLocation if authorized true") {
             //Arrange
-            let presenter = MapPresenter(delegate: self)
+            let presenter = MapPresenter(delegate: self,
+                                         interactor: self.interactor)
 
             //Act
             presenter.localizeMeButtonTappedWithLocationAuthorized(true)
@@ -88,7 +115,8 @@ class MapPresenterTests: QuickSpec {
           }
           it("should not call delegate.centerMapOnCurrentLocation if authorized false") {
             //Arrange
-            let presenter = MapPresenter(delegate: self)
+            let presenter = MapPresenter(delegate: self,
+                                         interactor: self.interactor)
 
             //Act
             presenter.localizeMeButtonTappedWithLocationAuthorized(false)
@@ -102,7 +130,8 @@ class MapPresenterTests: QuickSpec {
         context("whenever") {
           it("should call delegate.addAnnotation with the annotation at the right coordinate") {
             //Arrange
-            let presenter = MapPresenter(delegate: self)
+            let presenter = MapPresenter(delegate: self,
+                                         interactor: self.interactor)
             let expectedCoordinate = CLLocationCoordinate2D(latitude: 23, longitude: 43)
 
             //Act

@@ -16,6 +16,7 @@ protocol MapPresenterDelegate {
 struct MapPresenter {
 
   let delegate: MapPresenterDelegate
+  let interactor: MapInteractorProtocol
 
   var mapDistance: Double {
     return 1000
@@ -25,15 +26,17 @@ struct MapPresenter {
     return L10n.mapScreenTitle.string
   }
 
+  var bottomBarLabelText: String {
+    return L10n.mapSelectDestination.string
+  }
+
   // *********************************************************************
   // MARK: - Permissions 
   func locationPermissionAuthorized() {
     delegate.centerMapOnCurrentLocation()
   }
 
-  func locationPermissionCanceled() {
-
-  }
+  func locationPermissionCanceled() {}
 
   // *********************************************************************
   // MARK: - Action Management

@@ -1,7 +1,8 @@
-"AppName"        = "Compass";
-"GeneralOk"      = "Ok";
-"GeneralCancel"  = "Cancel";
-"GeneralConfirm" = "Confirm";
-"GeneralError"   = "Error";
-"GeneralStart"   = "Start";
-"MapScreenTitle" = "Map";
+"AppName"              = "Compass";
+"GeneralOk"            = "Ok";
+"GeneralCancel"        = "Cancel";
+"GeneralConfirm"       = "Confirm";
+"GeneralError"         = "Error";
+"GeneralStart"         = "Start";
+"MapScreenTitle"       = "Map";
+"MapSelectDestination" = "Select destination";

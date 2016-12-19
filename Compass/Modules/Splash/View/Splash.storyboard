@@ -21,18 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Compass_Splash_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="TLA-jD-Ifs">
-                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Compass_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="TLA-jD-Ifs">
+                                <rect key="frame" x="62" y="208" width="250" height="250"/>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4xw-3I-X3A">
-                                <rect key="frame" x="167" y="457" width="40" height="40"/>
+                                <rect key="frame" x="167" y="482" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="YYQ-cL-3vb"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="fCb-pZ-sNX"/>
                                 </constraints>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjV-vB-XAt">
-                                <rect key="frame" x="166.5" y="521" width="42" height="21"/>
+                                <rect key="frame" x="166.5" y="546" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -60,6 +60,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Compass_Splash_Icon" width="200" height="200"/>
+        <image name="Compass_Icon" width="250" height="250"/>
     </resources>
 </document>
