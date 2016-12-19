@@ -2,8 +2,40 @@
 //  LocationService.swift
 //  Compass
 //
-//  Created by Antoine Boileau on 19/12/16.
-//  Copyright © 2016 Antoine Boileau. All rights reserved.
+//  Copyright (c) 2016 Antoine Boileau
+//  MIT License
 //
 
-import Foundation
+import CoreLocation
+
+protocol LocationServiceProtocol {
+  var delegate: LocationServiceProtocolDelegate { get set }
+}
+
+protocol LocationServiceProtocolDelegate {
+  func locationServiceDidUpdateLocation(to location: CLLocation)
+}
+
+class LocationService: NSObject, LocationServiceProtocol {
+
+  let locationManager: CLLocationManager
+  var delegate: LocationServiceProtocolDelegate
+
+  init(delegate: LocationServiceProtocolDelegate) {
+    locationManager = CLLocationManager()
+    locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+
+    self.delegate = delegate
+    super.init()
+  }
+}
+
+extension LocationService: CLLocationManagerDelegate {
+
+  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    guard let lastLocation = locations.last else {
+      return
+    }
+    delegate.locationServiceDidUpdateLocation(to: lastLocation)
+  }
+}
