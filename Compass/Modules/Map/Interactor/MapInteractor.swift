@@ -21,13 +21,40 @@ protocol MapInteractorProtocol {
 
 class MapInteractor: MapInteractorProtocol {
 
-//  let delegate: MapInteractorDelegate
+  let bluetoothService: BluetoothServiceProtocol
+
+  //  let delegate: MapInteractorDelegate
   var destination: CLLocation?
   var bearingToDestination: Double?
 
-  init() {}
+  init(bluetoothService: BluetoothServiceProtocol) {
+    self.bluetoothService = bluetoothService
+    self.bluetoothService.delegate = self
 
-  func setDestination(to destination: CLLocationCoordinate2D) {
-
+    bluetoothService.startScanning()
   }
+
+  // TODO: TEST
+  func setDestination(to destination: CLLocationCoordinate2D) {
+    print("wrote: \(destination.latitude)")
+    bluetoothService.sendBearingToDevice(destination.latitude) { error in
+      print("Wrote to device with error: \(error)")
+    }
+  }
+}
+
+extension MapInteractor: BluetoothServiceDelegate {
+
+  func didSuccessfullyConnectToDevice() {}
+
+  func didFailToConnectToDevice(with error: Error?) {
+    print("Error:\(error)")
+    bluetoothService.startScanning()
+  }
+
+  func didDisconnectFromDevice(with error: Error?) {
+    print("Error:\(error)")
+    bluetoothService.startScanning()
+  }
+
 }

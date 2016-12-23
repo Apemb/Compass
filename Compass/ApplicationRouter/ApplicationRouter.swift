@@ -7,11 +7,24 @@
 //
 
 import UIKit
+import CoreBluetooth
 
 class ApplicationRouter {
 
   var window: UIWindow
   var navigationController: UINavigationController!
+  var bluetoothService: BluetoothService!
+
+  var bleConfiguration: BLEConfiguration {
+    let bearingWriteCharacteristic = BLECharacteristic(uuid: CBUUID(string: "2F016955-E675-49A6-9176-111E2A1CF333"),
+                                                       property: CBCharacteristicProperties.write )
+    let bearingService = BLEBearingService(uuid: CBUUID(string: "E71EE188-279F-4ED6-8055-12D77BFD900C"),
+                                           bearingWriteCharacteristic: bearingWriteCharacteristic,
+                                           distanceWriteCharacteristic: bearingWriteCharacteristic)
+
+    return BLEConfiguration(deviceName: "Adafruit Bluefruit LE",
+                            bearingService: bearingService)
+  }
 
   init(window: UIWindow) {
     self.window = window
@@ -24,11 +37,12 @@ class ApplicationRouter {
     DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
       self.navigationController = UINavigationController()
       self.navigationController.isNavigationBarHidden = false
+      self.bluetoothService = BluetoothService(bleConfiguration: self.bleConfiguration)
     }
   }
 
   func fadeToMapView() {
-    let module = MapModule()
+    let module = MapModule(bluetoothService: bluetoothService)
     let mapController = module.firstViewController
 
     navigationController.pushViewController(mapController, animated: false)
@@ -51,7 +65,7 @@ class ApplicationRouter {
       pushViewController(module.firstViewController)
 
     case .map:
-      let module = MapModule()
+      let module = MapModule(bluetoothService: bluetoothService)
       pushViewController(module.firstViewController)
     }
   }

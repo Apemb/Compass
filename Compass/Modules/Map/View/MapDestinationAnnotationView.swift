@@ -14,21 +14,25 @@ class MapDestinationAnnotationView: MKAnnotationView {
     super.init(annotation: annotation,
                reuseIdentifier: MapDestinationAnnotationView.reuseIdentifier)
     image = Asset.arrivalIcon.image
-
-    centerOffset = CGPoint(x:0, y: -Asset.arrivalIcon.image.size.height / 2.0 + 2)
     canShowCallout = false
   }
 
   override func didMoveToSuperview() {
     shadow()
-    self.transform = CGAffineTransform(scaleX: 0, y: 0)
+    animateApparition()
+  }
+
+  private func animateApparition() {
+    self.frame.size = CGSize(width: 0, height: 0)
+    self.centerOffset = CGPoint(x:0, y:0)
     UIView.animate(withDuration: 0.5,
                    delay: 0,
-                   usingSpringWithDamping: 0.75,
+                   usingSpringWithDamping: 0.7,
                    initialSpringVelocity: 1.0,
                    options: UIViewAnimationOptions.curveEaseOut,
                    animations: {
-                    self.transform = CGAffineTransform(scaleX: 1, y: 1)
+                    self.frame.size = Asset.arrivalIcon.image.size
+                    self.centerOffset = CGPoint(x:0, y: -Asset.arrivalIcon.image.size.height / 2.0 + 2)
     },
                    completion: nil)
   }

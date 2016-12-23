@@ -48,5 +48,8 @@ struct MapPresenter {
 
   func handleLongTap(at coordinate: CLLocationCoordinate2D) {
     delegate.addDestination(MapDestinationAnnotation(coordinate: coordinate))
+
+    // TODO: test
+    interactor.setDestination(to: coordinate)
   }
 }
